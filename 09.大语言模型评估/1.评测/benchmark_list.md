@@ -91,6 +91,8 @@ GSM8K（Grade School Math 8K） spurred LLMs for reasoning, and is used in every
 MATH is also used in most LLM papers.
 
 
+![math2](math2.png)
+
 ![math](math.png)
 
 
@@ -118,6 +120,18 @@ homepage: https://huggingface.co/datasets/openai/openai_humaneval
 - entry_point: function name to be called to test the candidate solution
 
 
+
+## MT-Bench
+
+
+MT-Bench 是一个针对多轮对话的基准评测集，专门用于评估大语言模型（LLMs）的对话能力。它由 Stanford Alpaca 团队 创建，旨在通过多轮对话场景测试模型在不同任务上的表现。MT-Bench 的全名是 Multi-Turn Benchmark，专注于模拟现实中的对话任务，测试模型的上下文保持能力、连贯性和信息整合能力。
+
+
+在 MT-Bench 上使用gpt4 来评估是否准确. alpacaEval 同样也是一个 LLM as a Judge，用于评估模型在单轮对话任务上的性能。
+
+MT-Bench 包含了 10 个不同的对话任务，涵盖了多轮对话、知识对话、情感对话、推理对话等多个领域。这些任务旨在测试模型在多轮对话场景中的表现，以及对话的连贯性、信息保持和推理能力。
+
+
 ## GPQA
 
 
@@ -136,3 +150,12 @@ Here is the correct breakdown of a data instance in GPQA:
 - correct_answer: "Red dwarf"
 - explanation: "Red dwarfs are the most common type of star in the universe. They are small, cool stars that are less than half the mass of the Sun. They are the most common type of star in the universe, making up about 70% of all stars."
 - Expert and Non-Expert Validation: "The average correct rate of experts with a relevant Ph.D. or Ph.D. candidate is 65%, while non-experts, even with the help of the internet, have an average correct rate of 34%."
+
+
+##  BIG-Bench 
+
+BIG-Bench（Beyond the Imitation Game Benchmark）是一个用于测试大型语言模型（LLMs）能力的大规模基准测试集. 它包含了 10 个不同的任务，涵盖了自然语言理解、推理、生成、多语言任务等多个领域。BIG-Bench 旨在测试模型在各种任务上的性能，以及对模型的鲁棒性、伦理、偏见和真实性等方面的评估。
+
+BIG-Bench Hard中的某些任务尽管具有挑战性，但其结果无法得出关于模型智能的有意义结论。BIG-bench 有特别多奇葩任务, 为难语言模型
+
+

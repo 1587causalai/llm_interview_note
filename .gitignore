@@ -1,0 +1,15 @@
+# IDE
+.idea/
+.vscode/
+
+# Node
+node_modules/
+
+# Build
+deploy/
+
+# Temp files
+tmp.py
+
+# Docs build directory
+docs/ 

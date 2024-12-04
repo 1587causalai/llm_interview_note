@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -20,9 +22,18 @@ jobs:
       - name: Install Dependencies
         run: npm install -g docsify-cli
 
+      - name: Prepare Deploy
+        run: |
+          # 创建临时部署目录
+          mkdir deploy
+          # 复制需要的文件到部署目录，排除不需要的文件夹
+          cp -r *.md *.html .nojekyll [0-9]*.* deploy/
+          cp -r pdf_note deploy/
+          # 不复制 Code-master, docs, .git 等目录
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages  # 部署到 gh-pages 分支
-          folder: .         # 部署整个目录
-          clean: true      # 清理旧文件 
+          folder: deploy    # 部署临时目录
+          clean: true      # 清理旧文件

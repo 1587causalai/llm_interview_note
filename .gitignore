@@ -13,3 +13,7 @@ tmp.py
 
 # Docs build directory
 docs/ 
+
+projects/*
+98.related_courses/tsinghua_llm_open_course/
+Code-master/

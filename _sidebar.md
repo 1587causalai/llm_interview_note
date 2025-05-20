@@ -1,5 +1,4 @@
 * [Home](/)
-* [Real Interview Questions](/ch1)
 * [Docsify 文档教程](/docsify_guide.md)
 * [01.LLM Fundamentals](/01.llm_fundamentals/)
   * [1.1 大模型发展历程](/01.llm_fundamentals/)
